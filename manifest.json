@@ -1,22 +1,40 @@
 {
   "manifest_version": 2,
   "name": "Solarized (Dark) Theme for Facebook",
-  "version": "2.4",
+  "version": "4.0",
   "description": "Solarized (Dark) color scheme for Facebook & Messenger.",
-  "homepage_url": "https://github.com/RHJihan/Solarized-Facebook",
+  "homepage_url": "https://github.com/RHJihan/solarized-facebook",
   "icons": {
-    "16": "icons/icon16.png",
     "48": "icons/icon48.png",
+    "64": "icons/icon64.png",
     "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "solarized-facebook@rhjihan",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
   },
   "content_scripts": [
     {
-      "matches": ["https://*.messenger.com/*", "https://*.facebook.com/*"],
-      "css": ["assets/style.css"]
+      "matches": [
+        "https://*.messenger.com/*",
+        "https://*.facebook.com/*"
+      ],
+      "css": [
+        "assets/style.css"
+      ]
     }
   ],
   "background": {
-    "scripts": ["assets/background.js"],
+    "scripts": [
+      "assets/background.js"
+    ],
     "persistent": false
-}
+  }
 }
